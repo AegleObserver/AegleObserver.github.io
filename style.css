@@ -16,10 +16,21 @@ body{
   margin:0;
   color:var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans SC", Arial, sans-serif;
+
   background:
+    /* 1) 黑色遮罩：保证文字可读 */
+    linear-gradient(180deg, rgba(7,11,20,.65), rgba(11,18,32,.85)),
+    /* 2) 背景图（把路径改成你的图片） */
+    url("assets/bg.jpg"),
+    /* 3) 你原来的渐变氛围光 */
     radial-gradient(900px 500px at 15% 10%, rgba(106,166,255,.28), transparent 60%),
     radial-gradient(900px 500px at 90% 0%, rgba(102,242,194,.16), transparent 55%),
     linear-gradient(180deg, var(--bg1), var(--bg2));
+
+  background-size: cover, cover, auto, auto, auto;
+  background-position: center, center, 15% 10%, 90% 0%, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed; /* 让背景有“视差”感觉；手机上有时会被忽略 */
 }
 
 a{ color:inherit; }
