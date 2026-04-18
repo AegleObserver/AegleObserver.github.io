@@ -2,11 +2,106 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>from AegleObserver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AegleObserver｜My homepage</title>
+  <meta name="description" content="AegleObserver 的个人主页与博客入口" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <h1>hi there.</h1>
-  <p>du culpus engratio.</p>
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="avatar" aria-hidden="true">AO</div>
+
+      <div class="hero-text">
+        <p class="badge">个人主页</p>
+        <h1>你好，我是 <span class="accent">AegleObserver</span></h1>
+        <p class="lead">
+          我在这里记录学习、项目与一些想法。欢迎来到我的网站！
+        </p>
+
+        <div class="actions">
+          <!-- 之后你写博客了，把 blog.html 或 posts/index.html 链接放这里 -->
+          <a class="btn" href="#about">了解我</a>
+          <a class="btn btn-ghost" href="#links">常用链接</a>
+        </div>
+
+        <p class="note">
+          站点托管于 GitHub Pages。更新方式：提交（commit）即可发布。
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>关于我</h2>
+      <p>
+      </p>
+
+      <div class="grid-2">
+        <div>
+          <h3>我正在做的事</h3>
+          <ul>
+            <li>学习 HTML / CSS / JavaScript</li>
+            <li>搭建个人网站与博客</li>
+            <li>整理项目与笔记</li>
+          </ul>
+        </div>
+        <div>
+          <h3>技能关键词</h3>
+          <div class="tags">
+            <span class="tag">Web</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">写作</span>
+            <span class="tag">学习笔记</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="card">
+      <h2>链接</h2>
+      <div class="link-list">
+        <a class="link-item" href="https://github.com/AegleObserver" target="_blank" rel="noreferrer">
+          <span class="link-title">GitHub</span>
+          <span class="link-desc">查看我的代码与项目</span>
+        </a>
+
+        <!-- 你可以把下面的 # 换成真实链接 -->
+        <a class="link-item" href="#" onclick="return false;">
+          <span class="link-title">博客（即将上线）</span>
+          <span class="link-desc">文章与笔记入口（后续添加 blog.html）</span>
+        </a>
+
+        <a class="link-item" href="mailto:yourname@example.com">
+          <span class="link-title">邮箱</span>
+          <span class="link-desc">2231357034@qq.com（改成你的）</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>最近更新</h2>
+      <p class="muted">
+        这里你以后可以放“最近 3 篇文章”的链接。现在先留空也没问题。
+      </p>
+      <ul class="muted">
+        <li>（示例）2026-04-18：搭建主页骨架</li>
+        <li>（示例）2026-04-20：发布第一篇博客</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> AegleObserver</p>
+      <p class="muted">Built with HTML & CSS · Deployed on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
